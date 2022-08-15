@@ -4,5 +4,5 @@
   "toEmailAddresses" : [{"email": "allen.nourdeh@mobiusws.com"}, {"email": "hnagar@gmail.com"}],
   "attachments": [{"file": "Mobius_IRSF_Numbers_with_country"}, {"file":"Mobius_IRSF_Numbers"}],
   "mailContent": "The attached files contain the latest IRSF numbers from Mobius"
-
+  "archiveDir": "C:/prismFilesArchives/"
 }

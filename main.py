@@ -11,7 +11,7 @@ import requests
 import json
 
 from emails.SendMail import sendEmail
-from parsePrismFile import extractZipFile, createMobiusFiles
+from parsePrismFile import extractZipFile, createMobiusFiles, archiveAllFiles
 
 
 def extractAndSentIRSFFiles(config):
@@ -26,7 +26,7 @@ def extractAndSentIRSFFiles(config):
         mailContent = conf['mailContent']
         toEmailAddresses = conf['toEmailAddresses']
         attachments = conf['attachments']
-
+        archiveDir = conf['archiveDir']
     #extract the donwloaded zipfile
     print(_zipDir)
 
@@ -37,7 +37,7 @@ def extractAndSentIRSFFiles(config):
     filesToAttach= createMobiusFiles(extractedCSV, attachments)
     #toEmailAddress = ['hnagar@gmail.com']
     sendEmail(mailContent, toEmailAddresses, filesToAttach)
-
+    archiveAllFiles(archiveDir, filesToAttach, _zipDir+prismFile)
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
