@@ -1,20 +1,15 @@
 # This is a sample Python script.
 
+import json
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import os
-import sys
-
-import pandas as pd
-import pathlib
-import requests
-import json
 
 from emails.SendMail import sendEmail
 from parsePrismFile import extractZipFile, createMobiusFiles, archiveAllFiles
 
 
-def extractAndSentIRSFFiles(config):
+def extractAndSendIRSFFiles(config):
     # Use a breakpoint in the code line below to debug your script.
     #print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
     #print(argv[1])
@@ -42,6 +37,6 @@ def extractAndSentIRSFFiles(config):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     jsonConfigFile = "config/prismMobiusConfig.json"
-    extractAndSentIRSFFiles(jsonConfigFile)
+    extractAndSendIRSFFiles(jsonConfigFile)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
